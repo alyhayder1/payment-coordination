@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Payment coordination and administrative services for independent freelancers working with international clients.">
+    <meta name="robots" content="index, follow">
+
+    <title>Ali Haider Payment Coordination & Administrative Services</title>
+
+    <style>
+        :root {
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text: #172033;
+            --muted: #64748b;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --border: #e2e8f0;
+            --light-blue: #eff6ff;
+            --max-width: 1080px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(100% - 40px, var(--max-width));
+            margin: 0 auto;
+        }
+
+        /* =========================
+           Navigation
+        ========================= */
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* =========================
+           Hero
+        ========================= */
+
+        .hero {
+            padding: 110px 0 100px;
+            background:
+                linear-gradient(
+                    180deg,
+                    #ffffff 0%,
+                    #f8fafc 100%
+                );
+        }
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 22px;
+
+            background: var(--light-blue);
+            color: var(--primary);
+
+            border-radius: 999px;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 68px);
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 34px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px 20px;
+
+            background: var(--primary);
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           Sections
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .section-header h2 {
+            font-size: 34px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 14px;
+        }
+
+        .section-header p {
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        /* =========================
+           Services
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .card-number {
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* =========================
+           How it works
+        ========================= */
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .step {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px 20px;
+        }
+
+        .step-number {
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--light-blue);
+            color: var(--primary);
+
+            font-weight: 700;
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+        .step h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           Two-column information
+        ========================= */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .info-box {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 35px;
+        }
+
+        .info-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .info-box p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .info-box ul {
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           About
+        ========================= */
+
+        .about {
+            background: white;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-content {
+            max-width: 760px;
+        }
+
+        .about-content h2 {
+            font-size: 34px;
+            margin-bottom: 18px;
+        }
+
+        .about-content p {
+            color: var(--muted);
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           Contact
+        ========================= */
+
+        .contact-box {
+            background: var(--text);
+            color: white;
+            border-radius: 16px;
+            padding: 55px;
+        }
+
+        .contact-box h2 {
+            font-size: 34px;
+            margin-bottom: 14px;
+        }
+
+        .contact-box p {
+            color: #cbd5e1;
+            max-width: 620px;
+            margin-bottom: 25px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            color: white;
+            font-weight: 600;
+            border-bottom: 1px solid #94a3b8;
+            padding-bottom: 3px;
+        }
+
+        /* =========================
+           Legal
+        ========================= */
+
+        .legal {
+            padding: 60px 0;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .legal h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .legal p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 28px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        footer p,
+        footer a {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 0 70px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .services-grid,
+            .two-column,
+            .legal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                padding: 35px 25px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: min(100% - 28px, var(--max-width));
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .section-header h2,
+            .about-content h2,
+            .contact-box h2 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         Navigation
+    ========================== -->
+
+    <header>
+        <div class="container nav">
+            <a href="#home" class="logo">Ali Haider</a>
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#how-it-works">How It Works</a>
+                    </li>
+                    <li>
+                        <a href="#freelancers">Freelancers</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         Hero
+    ========================== -->
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="eyebrow">Administrative & Payment Coordination</span>
+                    <h1>Payment coordination for independent freelancers.</h1>
+                    <p>
+                        We provide payment coordination and administrative
+                        services that help independent freelancers manage
+                        payments from clients, including clients located
+                        internationally.
+                    </p>
+                    <a href="#contact" class="button">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             What We Do / Services
+        ========================== -->
+
+        <section id="services">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <h2>
+                        What We Do
+                    </h2>
+
+                    <p>
+                        Administrative and payment coordination services
+                        for independent professionals working with clients
+                        internationally.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <div class="card">
+
+                        <div class="card-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Payment Coordination
+                        </h3>
+
+                        <p>
+                            Coordination of client payments for independent
+                            freelancers using supported payment infrastructure
+                            and arrangements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Administrative Support
+                        </h3>
+
+                        <p>
+                            Administrative assistance related to payment
+                            records, transaction reconciliation and
+                            payment documentation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-number">
+                            03
+                        </div>
+
+                        <h3>
+                            International Payment Coordination
+                        </h3>
+
+                        <p>
+                            Support for independent freelancers who work
+                            with clients internationally and require
+                            suitable payment arrangements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Transaction Records
+                        </h3>
+
+                        <p>
+                            Clear records of relevant payments, applicable
+                            service fees and amounts coordinated through
+                            the service.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             How It Works
+        ========================== -->
+
+        <section id="how-it-works">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <h2>
+                        How It Works
+                    </h2>
+
+                    <p>
+                        The underlying freelance relationship remains
+                        between the freelancer and their client.
+                    </p>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Service Agreement
+                        </h3>
+
+                        <p>
+                            The independent freelancer agrees with their
+                            client on the scope, price and delivery of
+                            the service.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            Client Payment
+                        </h3>
+
+                        <p>
+                            Where our service is used, the client makes
+                            the agreed payment through the available
+                            payment infrastructure.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+                        <h3>
+                            Coordination
+                        </h3>
+
+                        <p>
+                            The payment is recorded and coordinated in
+                            accordance with the applicable platform and
+                            payment arrangements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <h3>
+                            Freelancer Payout
+                        </h3>
+
+                        <p>
+                            The amount due to the freelancer is paid
+                            through the supported payout method after
+                            applicable fees.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            5
+                        </div>
+
+                        <h3>
+                            Records
+                        </h3>
+
+                        <p>
+                            Relevant payment and transaction records
+                            are maintained for administration and
+                            reconciliation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Freelancers / Clients
+        ========================== -->
+
+        <section id="freelancers">
+
+            <div class="container">
+
+                <div class="two-column">
+
+
+                    <!-- Freelancers -->
+
+                    <div class="info-box">
+
+                        <h3>
+                            For Independent Freelancers
+                        </h3>
+
+                        <p>
+                            Our service is intended for independent
+                            professionals who already provide services
+                            directly to their own clients.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Agree your scope and pricing directly
+                                with your client.
+                            </li>
+
+                            <li>
+                                Remain responsible for providing the
+                                underlying service.
+                            </li>
+
+                            <li>
+                                Provide appropriate invoices or other
+                                required documentation.
+                            </li>
+
+                            <li>
+                                Remain responsible for your own tax
+                                and legal obligations.
+                            </li>
+
+                            <li>
+                                Use our service for payment coordination
+                                and related administration.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Clients -->
+
+                    <div class="info-box">
+
+                        <h3>
+                            For Clients
+                        </h3>
+
+                        <p>
+                            Clients work directly with the relevant
+                            independent freelancer regarding the
+                            underlying service.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Agree the scope of work and price with
+                                the freelancer.
+                            </li>
+
+                            <li>
+                                Review the applicable payment
+                                arrangements before making payment.
+                            </li>
+
+                            <li>
+                                Make payments through the available
+                                payment infrastructure.
+                            </li>
+
+                            <li>
+                                Contact the relevant freelancer regarding
+                                questions about the underlying service.
+                            </li>
+
+                            <li>
+                                Contact us for payment-related
+                                administrative questions.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             About
+        ========================== -->
+
+        <section class="about" id="about">
+
+            <div class="container">
+
+                <div class="about-content">
+
+                    <h2>
+                        About
+                    </h2>
+
+                    <p>
+                        Ali Haider provides independent administrative
+                        and payment coordination services for freelancers.
+                    </p>
+
+                    <p>
+                        The service is operated from Germany and is
+                        intended to help independent professionals
+                        manage payment-related administration when
+                        working with clients internationally.
+                    </p>
+
+                    <p>
+                        The underlying freelance services remain the
+                        responsibility of the respective independent
+                        freelancer. Our role is limited to the
+                        administrative and payment coordination services
+                        described on this website.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Contact
+        ========================== -->
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="contact-box">
+
+                    <h2>
+                        Contact
+                    </h2>
+
+                    <p>
+                        For business enquiries, questions about our
+                        administrative services, or payment-related
+                        coordination matters, please get in touch.
+                    </p>
+
+                    <!-- CHANGE THIS EMAIL -->
+                    <a
+                        href="mailto:YOUR-BUSINESS-EMAIL@example.com"
+                        class="contact-email"
+                    >
+                        YOUR-BUSINESS-EMAIL@example.com
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Legal Information
+        ========================== -->
+
+        <section class="legal">
+
+            <div class="container">
+
+                <div class="legal-grid">
+
+
+                    <div>
+
+                        <h3>
+                            Legal Notice
+                        </h3>
+
+                        <!-- REPLACE WITH YOUR ACTUAL DETAILS -->
+
+                        <p>
+                            <strong>Ali Haider</strong>
+                        </p>
+
+                        <p>
+                           Friedenstraße 2, 97072, Würzburg, Germany
+                        </p>
+
+                        <p>
+                            Germany
+                        </p>
+
+                        <p>
+                            Email: alyhayder1@gmail.com
+                        </p>
+
+                        <p>
+                            Business activity:
+                            Administrative and payment coordination
+                            services for independent freelancers.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Privacy
+                        </h3>
+
+                        <p>
+                            We process personal information only where
+                            necessary to provide our services,
+                            communicate with clients and freelancers,
+                            maintain business records and comply with
+                            applicable legal obligations.
+                        </p>
+
+                        <p>
+                            Payment-related information may also be
+                            processed by third-party payment service
+                            providers where applicable.
+                        </p>
+
+                        <p>
+                            Please contact us for questions concerning
+                            the processing of personal information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <p>
+                    © 2026 Ali Haider. All rights reserved.
+                </p>
+
+                <div class="footer-links">
+
+                    <a href="#about">
+                        About
+                    </a>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                    <a href="#home">
+                        Back to top
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
